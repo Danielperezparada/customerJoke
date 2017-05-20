@@ -1,4 +1,4 @@
-
+// dynamic datasource to work in local and with the docker-compose
 module.exports = (() => {
   const config = {};
 
