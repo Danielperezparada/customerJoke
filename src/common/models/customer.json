@@ -1,0 +1,34 @@
+{
+  "name": "customer",
+  "plural": "customers",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "any",
+      "id": true,
+      "required": true,
+      "defaultFn": "uuid"
+    },
+    "first_name": {
+      "type": "any",
+      "required": true
+    },
+    "last_name": {
+      "type": "any",
+      "required": true
+    },
+    "birth_date": {
+      "type": "any",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
