@@ -57,6 +57,7 @@ docker-compose up
 ```
 
 This command run for you all this process:
+
 1.- Pull down from Dockerhub the node, and mongo images that we need as dependency.
 
 2.- Create the image of customerJoke based on the Dockerfile of the project.
