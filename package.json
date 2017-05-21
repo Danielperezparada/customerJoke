@@ -6,7 +6,6 @@
     "lint": "eslint .",
     "start-dev": "cross-env NODE_ENV=multienv npm_config_db=dev-mode babel-node src/server/server.js",
     "start": "cross-env NODE_ENV=multienv babel-node src/server/server.js",
-    "startaa": "cross-env NODE_ENV=multienv babel-node src/server/server.js",
     "test": "npm run unit-test && npm run e2e-test",
     "unit-test": "cross-env NODE_ENV=multienv npm_config_db=dev-mode nyc --require babel-core/register --reporter=lcov mocha src/tests/unit/UNIT.js && nyc report",
     "e2e-test": "cross-env NODE_ENV=multienv npm_config_db=dev-mode nyc --require babel-core/register --reporter=lcov mocha src/tests/smoke/SMOKE.js && nyc report",
