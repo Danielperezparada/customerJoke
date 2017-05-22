@@ -62,7 +62,7 @@ This command run for you all this process:
 
 2.- Create the image of customerJoke based on the Dockerfile of the project.
 
-3.- Rise up the container of mongo and customerJoke and link it between them.
+3.- Rise the container of mongo and customerJoke and link it between them.
 
 
 Once the command finish, you will have a server up and running in your host (a ubuntu VM in my case).
