@@ -2,11 +2,11 @@
 
 ## Instructions:
 
-The porpoise of this document is to explain the instructions to install and execute the customerJoke Api. It can run in your own machine as local or in a docker container using docker-compose.
+The porpoise of this document is to explain the instructions to install and execute the customerJoke Api. It can runs in your own machine as local or in a docker container using docker-compose.
 
 ### Local
 
-To be able to work in local you must have a MongoDB instance up and runing in your local machine with this specifications:
+To be able to work in local you must have a MongoDB instance up and runing in your local machine with these specifications:
 
 ```sh
 hostName: "localhost"
@@ -33,12 +33,12 @@ npm run start-dev
 npm test
 ```
 
-3.- To just run unit test and see some reports:
+3.- To run just unit test and see some reports:
 ```sh
 npm run unit-test
 ```
 
-4.- To just run end to end test and see some reports:
+4.- To run just end to end test and see some reports:
 ```sh
 npm run e2e-test
 ```
