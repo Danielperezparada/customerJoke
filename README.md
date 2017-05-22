@@ -2,11 +2,11 @@
 
 ## Instructions:
 
-The porpouse of this document is explain the instructions to install and execute the customerJoke Api. It can run in your own machine as local or in a docker container using docker-compose.
+The porpoise of this document is to explain the instructions to install and execute the customerJoke Api. It can run in your own machine as local or in a docker container using docker-compose.
 
 ### Local
 
-To be able to work in local you have to have a MongoDB instance up and runing in your local machine with this specifications:
+To be able to work in local you must have a MongoDB instance up and runing in your local machine with this specifications:
 
 ```sh
 hostName: "localhost"
