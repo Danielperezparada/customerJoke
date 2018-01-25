@@ -16,5 +16,9 @@
   "customer": {
     "dataSource": "db",
     "public": true
-  }
+  },
+  "icndbjoke": {
+   "dataSource": "icndbJoke",
+   "public": false
+ }
 }

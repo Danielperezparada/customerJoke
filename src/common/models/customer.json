@@ -14,15 +14,15 @@
       "required": true,
       "defaultFn": "uuid"
     },
-    "first_name": {
+    "firstName": {
       "type": "any",
       "required": true
     },
-    "last_name": {
+    "lastName": {
       "type": "any",
       "required": true
     },
-    "birth_date": {
+    "birthDate": {
       "type": "any",
       "required": true
     }

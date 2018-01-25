@@ -1,12 +1,12 @@
 
-import supertest from 'supertest';
-import expect from 'expect';
+const supertest = require('supertest');
+const expect = require('expect');
 
-import customerTest1 from '../samples/customer1.json';
-import customerUpdatedTest1 from '../samples/customerUpdated1.json';
-import customerUpdatedTest2 from '../samples/customerUpdated2.json';
+const customerTest1 = require('../samples/customer1.json');
+const customerUpdatedTest1 = require('../samples/customerUpdated1.json');
+const customerUpdatedTest2 = require('../samples/customerUpdated2.json');
 
-import app from '../../../server/server';
+const app = require('../../../server/server');
 
 const server = supertest.agent(app);
 

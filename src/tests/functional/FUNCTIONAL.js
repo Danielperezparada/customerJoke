@@ -1,8 +1,8 @@
 
-import customerPosts from './apiTest/posts';
-import customerGets from './apiTest/gets';
-import customerPuts from './apiTest/puts';
-import customerDeletes from './apiTest/deletes';
+const customerPosts = require('./apiTest/posts');
+const customerGets = require('./apiTest/gets');
+const customerPuts = require('./apiTest/puts');
+const customerDeletes = require('./apiTest/deletes');
 
 describe('Smoke Tests For Customers Api', () => {
   // Test
