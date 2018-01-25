@@ -14,20 +14,20 @@ exports.getAllCustomersTest = () => {
   it('GET All Customers - Positive.', (done) => {
     server.get('/api/customers')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(3);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(3);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toExist();
-          expect(element.firstName).toExist();
-          expect(element.lastName).toExist();
-          expect(element.birthDate).toExist();
+          expect(element.id).toBeDefined();
+          expect(element.firstName).toBeDefined();
+          expect(element.lastName).toBeDefined();
+          expect(element.birthDate).toBeDefined();
         });
 
         done();
@@ -41,20 +41,20 @@ exports.getAllCustomersPaginatedFirstPartAscTest = () => {
       .send('offset=0')
       .send('limit=1')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(1);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(1);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toEqual(customerTest1.id);
-          expect(element.firstName).toEqual(customerTest1.firstName);
-          expect(element.lastName).toEqual(customerTest1.lastName);
-          expect(element.birthDate).toEqual(customerTest1.birthDate);
+          expect(element.id).toBe(customerTest1.id);
+          expect(element.firstName).toBe(customerTest1.firstName);
+          expect(element.lastName).toBe(customerTest1.lastName);
+          expect(element.birthDate).toBe(customerTest1.birthDate);
         });
 
         done();
@@ -68,20 +68,20 @@ exports.getAllCustomersPaginatedSecondPartAscTest = () => {
       .send('offset=1')
       .send('limit=1')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(1);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(1);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toEqual(customerTest4.id);
-          expect(element.firstName).toEqual(customerTest4.firstName);
-          expect(element.lastName).toEqual(customerTest4.lastName);
-          expect(element.birthDate).toEqual(customerTest4.birthDate);
+          expect(element.id).toBe(customerTest4.id);
+          expect(element.firstName).toBe(customerTest4.firstName);
+          expect(element.lastName).toBe(customerTest4.lastName);
+          expect(element.birthDate).toBe(customerTest4.birthDate);
         });
 
         done();
@@ -95,20 +95,20 @@ exports.getAllCustomersPaginatedThirdPartAscTest = () => {
       .send('offset=2')
       .send('limit=1')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(1);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(1);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toEqual(customerTest5.id);
-          expect(element.firstName).toEqual(customerTest5.firstName);
-          expect(element.lastName).toEqual(customerTest5.lastName);
-          expect(element.birthDate).toEqual(customerTest5.birthDate);
+          expect(element.id).toBe(customerTest5.id);
+          expect(element.firstName).toBe(customerTest5.firstName);
+          expect(element.lastName).toBe(customerTest5.lastName);
+          expect(element.birthDate).toBe(customerTest5.birthDate);
         });
 
         done();
@@ -122,20 +122,20 @@ exports.getAllCustomersPaginatedFirstPartDescTest = () => {
       .send('offset=0')
       .send('limit=1')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(1);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(1);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toEqual(customerTest5.id);
-          expect(element.firstName).toEqual(customerTest5.firstName);
-          expect(element.lastName).toEqual(customerTest5.lastName);
-          expect(element.birthDate).toEqual(customerTest5.birthDate);
+          expect(element.id).toBe(customerTest5.id);
+          expect(element.firstName).toBe(customerTest5.firstName);
+          expect(element.lastName).toBe(customerTest5.lastName);
+          expect(element.birthDate).toBe(customerTest5.birthDate);
         });
 
         done();
@@ -149,20 +149,20 @@ exports.getAllCustomersPaginatedSecondPartDescTest = () => {
       .send('offset=1')
       .send('limit=1')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(1);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(1);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toEqual(customerTest4.id);
-          expect(element.firstName).toEqual(customerTest4.firstName);
-          expect(element.lastName).toEqual(customerTest4.lastName);
-          expect(element.birthDate).toEqual(customerTest4.birthDate);
+          expect(element.id).toBe(customerTest4.id);
+          expect(element.firstName).toBe(customerTest4.firstName);
+          expect(element.lastName).toBe(customerTest4.lastName);
+          expect(element.birthDate).toBe(customerTest4.birthDate);
         });
 
         done();
@@ -176,20 +176,20 @@ exports.getAllCustomersPaginatedThirdPartDescTest = () => {
       .send('offset=2')
       .send('limit=1')
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.items.length).toEqual(1);
-        expect(res.body.offset).toExist();
-        expect(res.body.limit).toExist();
-        expect(res.body.href).toExist();
-        expect(res.body.first).toExist();
-        expect(res.body.last).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.items.length).toBe(1);
+        expect(res.body.offset).toBeDefined();
+        expect(res.body.limit).toBeDefined();
+        expect(res.body.href).toBeDefined();
+        expect(res.body.first).toBeDefined();
+        expect(res.body.last).toBeDefined();
 
         res.body.items.forEach((element) => {
-          expect(element.id).toEqual(customerTest1.id);
-          expect(element.firstName).toEqual(customerTest1.firstName);
-          expect(element.lastName).toEqual(customerTest1.lastName);
-          expect(element.birthDate).toEqual(customerTest1.birthDate);
+          expect(element.id).toBe(customerTest1.id);
+          expect(element.firstName).toBe(customerTest1.firstName);
+          expect(element.lastName).toBe(customerTest1.lastName);
+          expect(element.birthDate).toBe(customerTest1.birthDate);
         });
 
         done();
@@ -201,13 +201,13 @@ exports.getCustomerByIdTest = () => {
   it('GET Customer by Id - Positive.', (done) => {
     server.get(`/api/customers/${customerTest1.id}`)
       .end((err, res) => {
-        expect(res.status).toEqual(200);
-        expect(res.body.error).toNotExist();
-        expect(res.body.id).toEqual(customerTest1.id);
-        expect(res.body.firstName).toEqual(customerTest1.firstName);
-        expect(res.body.lastName).toEqual(customerTest1.lastName);
-        expect(res.body.age).toExist();
-        expect(res.body.joke).toExist();
+        expect(res.status).toBe(200);
+        expect(res.body.error).not.toBeDefined();
+        expect(res.body.id).toBe(customerTest1.id);
+        expect(res.body.firstName).toBe(customerTest1.firstName);
+        expect(res.body.lastName).toBe(customerTest1.lastName);
+        expect(res.body.age).toBeDefined();
+        expect(res.body.joke).toBeDefined();
 
         done();
       });
@@ -218,8 +218,8 @@ exports.getCustomerByFakeIdTest = () => {
   it('GET Customer by Fake Id - Negative.', (done) => {
     server.get(`/api/customers/FakeId`)
       .end((err, res) => {
-        expect(res.status).toEqual(404);
-        expect(res.body.error).toExist();
+        expect(res.status).toBe(404);
+        expect(res.body.error).toBeDefined();
 
         done();
       });

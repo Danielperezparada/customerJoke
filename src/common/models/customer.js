@@ -34,7 +34,12 @@ const FIND_CUSTOMER_BY_ID = {
 
 module.exports = (Customer) => {
   // Disable all default methods
-  disableAllMethods(Customer, ['create', 'updateAttributes', 'deleteById']);
+  // disableAllMethods(Customer, ['create', "updateAll", 'deleteById']);
+  disableAllMethods(Customer, ["create", "deleteById",
+    // "replaceOrCreate",
+    // "replaceById",
+    "patchAttributes"]);
+
 
   // Loopback validation
   Customer.validatesUniquenessOf('id', { message: 'is not unique' });
