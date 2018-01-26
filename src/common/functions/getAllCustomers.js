@@ -1,14 +1,14 @@
 
 const getCustomerPathParams = (query) => {
   let pathParam = '?';
-  if (query.first_name && (query.first_name.toLowerCase() === 'asc' || query.first_name.toLowerCase() === 'desc')) {
-    pathParam += `first_name=${query.first_name}&`;
+  if (query.firstName && (query.firstName.toLowerCase() === 'asc' || query.firstName.toLowerCase() === 'desc')) {
+    pathParam += `firstName=${query.firstName}&`;
   }
-  if (query.last_name && (query.last_name.toLowerCase() === 'asc' || query.last_name.toLowerCase() === 'desc')) {
-    pathParam += `last_name=${query.last_name}&`;
+  if (query.lastName && (query.lastName.toLowerCase() === 'asc' || query.lastName.toLowerCase() === 'desc')) {
+    pathParam += `lastName=${query.lastName}&`;
   }
-  if (query.birth_date && (query.birth_date.toLowerCase() === 'asc' || query.birth_date.toLowerCase() === 'desc')) {
-    pathParam += `birth_date=${query.birth_date}&`;
+  if (query.birthDate && (query.birthDate.toLowerCase() === 'asc' || query.birthDate.toLowerCase() === 'desc')) {
+    pathParam += `birthDate=${query.birthDate}&`;
   }
 
   return pathParam;

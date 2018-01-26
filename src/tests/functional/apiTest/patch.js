@@ -19,9 +19,9 @@ exports.patchCustomerOneByIdTest = () => {
         expect(res.status).toBe(200);
         expect(res.body.error).not.toBeDefined();
         expect(res.body.id).toBe(customerUpdatedTest1.id);
-        expect(res.body.first_name).toBe(customerUpdatedTest1.first_name);
-        expect(res.body.last_name).toBe(customerUpdatedTest1.last_name);
-        expect(res.body.birth_date).toBe(customerUpdatedTest1.birth_date);
+        expect(res.body.firstName).toBe(customerUpdatedTest1.firstName);
+        expect(res.body.lastName).toBe(customerUpdatedTest1.lastName);
+        expect(res.body.birthDate).toBe(customerUpdatedTest1.birthDate);
 
         done();
       });

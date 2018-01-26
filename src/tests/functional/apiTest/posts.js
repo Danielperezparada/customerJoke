@@ -21,9 +21,9 @@ exports.postCustomerOneTest = () => {
         expect(res.status).toBe(200);
         expect(res.body.error).not.toBeDefined();
         expect(res.body.id).toBe(customerTest1.id);
-        expect(res.body.first_name).toBe(customerTest1.first_name);
-        expect(res.body.last_name).toBe(customerTest1.last_name);
-        expect(res.body.birth_date).toBe(customerTest1.birth_date);
+        expect(res.body.firstName).toBe(customerTest1.firstName);
+        expect(res.body.lastName).toBe(customerTest1.lastName);
+        expect(res.body.birthDate).toBe(customerTest1.birthDate);
 
         done();
       });
@@ -67,9 +67,9 @@ exports.postCustomerFourTest = () => {
         expect(res.status).toBe(200);
         expect(res.body.error).not.toBeDefined();
         expect(res.body.id).toBe(customerTest4.id);
-        expect(res.body.first_name).toBe(customerTest4.first_name);
-        expect(res.body.last_name).toBe(customerTest4.last_name);
-        expect(res.body.birth_date).toBe(customerTest4.birth_date);
+        expect(res.body.firstName).toBe(customerTest4.firstName);
+        expect(res.body.lastName).toBe(customerTest4.lastName);
+        expect(res.body.birthDate).toBe(customerTest4.birthDate);
 
         done();
       });
@@ -85,9 +85,9 @@ exports.postCustomerFiveTest = () => {
         expect(res.status).toBe(200);
         expect(res.body.error).not.toBeDefined();
         expect(res.body.id).toBe(customerTest5.id);
-        expect(res.body.first_name).toBe(customerTest5.first_name);
-        expect(res.body.last_name).toBe(customerTest5.last_name);
-        expect(res.body.birth_date).toBe(customerTest5.birth_date);
+        expect(res.body.firstName).toBe(customerTest5.firstName);
+        expect(res.body.lastName).toBe(customerTest5.lastName);
+        expect(res.body.birthDate).toBe(customerTest5.birthDate);
 
         done();
       });
