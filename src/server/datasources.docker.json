@@ -1,0 +1,33 @@
+{
+  "db": {
+    "host": "db",
+    "port": 27017,
+    "database": "customerJoke",
+    "name": "db",
+    "connector": "mongodb"
+  },
+  "icndbJoke": {
+    "name": "icndbJoke",
+    "connector": "rest",
+    "crud": false,
+    "strictSSL": false,
+    "timeout": 60000,
+    "operations": [
+      {
+        "template": {
+        "method": "GET",
+        "url": "http://api.icndb.com/jokes/random?firstName={firstName}&lastName={lastName}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+        "functions": {
+          "getRandomJoke": [
+            "firstName",
+            "lastName"
+          ]
+        }
+      }
+    ]
+  }
+}

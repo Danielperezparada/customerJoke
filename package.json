@@ -37,8 +37,7 @@
   "nyc": {
     "exclude": [
       "**/helper.js",
-      "**/server.js",
-      "**/datasources.multienv.js"
+      "**/server.js"
     ]
   },
   "repository": {
